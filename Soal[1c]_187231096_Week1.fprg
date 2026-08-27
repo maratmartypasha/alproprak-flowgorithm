@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-06 03:47:26 PM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0wNjswMjo0Njo0NyBQTTszOTMw"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0wNjswMzo0NzoyNiBQTTsyOzQwMzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fahrenheit, reamur, celcius" type="Real" array="False" size=""/>
+            <output expression="&quot;masukkan suhu dalam fahrenheit&quot;" newline="True"/>
+            <input variable="fahrenheit"/>
+            <assign variable="reamur" expression="4/9*(fahrenheit-32)"/>
+            <assign variable="celcius" expression="(fahrenheit-32)*5/9"/>
+            <output expression="&quot;hasil konversi fahrenheit ke reamur&quot;" newline="True"/>
+            <output expression="reamur" newline="True"/>
+            <output expression="&quot;hasil konversi fahrenheit ke celcius&quot;" newline="True"/>
+            <output expression="celcius" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
