@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-06 03:50:39 PM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0wNjswOToxNDo1MCBBTTszOTEx"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0wNjswMzo1MDozOSBQTTsyOzQwMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="panjang, lebar, tinggi, isi, luasPermukaan" type="Real" array="False" size=""/>
+            <output expression="&quot;masukkan panjang&quot;" newline="True"/>
+            <input variable="panjang"/>
+            <output expression="&quot;masukkan lebar&quot;" newline="True"/>
+            <input variable="lebar"/>
+            <output expression="&quot;masukkan tinggi&quot;" newline="True"/>
+            <input variable="tinggi"/>
+            <assign variable="isi" expression="panjang*lebar*tinggi"/>
+            <assign variable="luasPermukaan" expression="2*(panjang*lebar+panjang*tinggi+lebar*tinggi)"/>
+            <output expression="&quot;hasil perhitungan isi&quot;" newline="True"/>
+            <output expression="isi" newline="True"/>
+            <output expression="&quot;hasil perhitungan luas permukaan&quot;" newline="True"/>
+            <output expression="luasPermukaan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
