@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-12 04:39:15 PM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMjswOToxMzoyNiBBTTszOTEw"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMjswNDozOToxNSBQTTszOzQwMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Mencari jumlah seluruh harta warisan yang ditinggalkan oleh seorang suami dari ibu beranak tiga dengan diketahui bahwa ibu menerima warisan sebesar 1/6 bagian dari harta warisan dan tiga orang putranya menerima warisan masing-masing sebesar 1/3 dari sisanya."/>
+            <declare name="ibu, putra, hartaSuami, ibuDanPutra, variabel" type="Real" array="False" size=""/>
+            <assign variable="ibu" expression="1/6"/>
+            <assign variable="putra" expression="1/3*5/6"/>
+            <comment text="Diketahui bahwa ibu dan seorang putra menerima total warisan sebesar 6 milyar."/>
+            <assign variable="ibuDanPutra" expression="ibu+putra"/>
+            <comment text="Jumlah warisan ibu dan seorang putra adalah 0.444444 atau bisa disebut 4/9 dari total seluruh harta warisan."/>
+            <output expression="&quot;Jumlah warisan ibu dan seorang putra adalah = &quot;&amp;ibuDanPutra" newline="True"/>
+            <assign variable="ibuDanPutra" expression="6000000000"/>
+            <assign variable="variabel" expression="(9/9)/(4/9)"/>
+            <comment text="Hasil perhitungan variabel adalah 2.25"/>
+            <assign variable="hartaSuami" expression="ibuDanPutra*variabel"/>
+            <output expression="&quot;Jumlah seluruh harta warisan yang ditinggalkan oleh suami ibu adalah = &quot;&amp;hartaSuami" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
