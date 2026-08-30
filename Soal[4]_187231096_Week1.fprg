@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-06 07:02:35 PM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0wNjswNDo0MToxNiBQTTszOTIz"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0wNjswNzowMjozNSBQTTsxOzQwMzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tinggiAwal, tinggiTerpotong, radiusAlas, radiusTutup, isiAwal, isiTerpotong, isiAkhir, garisPelukisAwal, garisPelukisTerpotong, luasAwal, luasTerpotong, luasAkhir" type="Real" array="False" size=""/>
+            <assign variable="tinggiAwal" expression="10"/>
+            <output expression="&quot;masukkan radius alas (x)&quot;" newline="True"/>
+            <input variable="radiusAlas"/>
+            <output expression="&quot;masukkan tinggi yang akan dipotong (y&lt;10)&quot;" newline="True"/>
+            <input variable="tinggiTerpotong"/>
+            <assign variable="isiAwal" expression="1/3*&#960;*radiusAlas*radiusAlas*tinggiAwal"/>
+            <assign variable="radiusTutup" expression="radiusAlas*tinggiTerpotong/tinggiAwal"/>
+            <assign variable="isiTerpotong" expression="1/3*&#960;*radiusTutup*radiusTutup*tinggiTerpotong"/>
+            <assign variable="isiAkhir" expression="isiAwal-isiTerpotong"/>
+            <assign variable="garisPelukisAwal" expression="Sqrt(tinggiAwal*tinggiAwal+radiusAlas*radiusAlas)"/>
+            <assign variable="luasAwal" expression="&#960;*radiusAlas*(radiusAlas+garisPelukisAwal)"/>
+            <assign variable="garisPelukisTerpotong" expression="Sqrt(tinggiTerpotong*tinggiTerpotong+radiusTutup*radiusTutup)"/>
+            <assign variable="luasTerpotong" expression="&#960;*radiusTutup*(radiusTutup+garisPelukisTerpotong)"/>
+            <assign variable="luasAkhir" expression="luasAwal-luasTerpotong"/>
+            <output expression="&quot;isi kerucut yang telah dipotong puncaknya&quot;" newline="True"/>
+            <output expression="isiAkhir" newline="True"/>
+            <output expression="&quot;luas permukaan kerucut yang telah dipotong puncaknya&quot;" newline="True"/>
+            <output expression="luasAkhir" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
