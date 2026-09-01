@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-12 11:41:54 AM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMjswODo0NDozMyBBTTszOTEx"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMjsxMTo0MTo1NCBBTTszOzQwMTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Mencari bilangan k dari 4 bilangan 6, 9, 11, dan k dengan menginput rata-rata (n) dari 4 bilangan tersebut."/>
+            <declare name="n, k, bil6, bil9, bil11" type="Real" array="False" size=""/>
+            <assign variable="bil6" expression="6"/>
+            <assign variable="bil9" expression="9"/>
+            <assign variable="bil11" expression="11"/>
+            <output expression="&quot;Masukkan rata-rata (n)&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="k" expression="4*n-(bil6+bil9+bil11)"/>
+            <output expression="&quot;Hasil dari k adalah = &quot;&amp;k" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
