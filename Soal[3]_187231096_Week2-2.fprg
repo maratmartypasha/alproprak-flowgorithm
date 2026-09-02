@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-13 09:31:23 AM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMzswODo0OToyOCBBTTszOTIx"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMzswOTozMToyMyBBTTsxOzQwMTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Mencari persentase kenaikan harga jual minyak goreng dibandingkan harga belinya dengan menginput harga beli, persentase ongkos kirim, dan keuntungan dari minyak goreng. "/>
+            <declare name="hargaBeli, p, untung, persentaseNaik, hargaJual" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan harga beli&quot;" newline="True"/>
+            <input variable="hargaBeli"/>
+            <output expression="&quot;Masukkan persentase ongkos kirim (p)&quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;Masukkan keuntungan&quot;" newline="True"/>
+            <input variable="untung"/>
+            <assign variable="hargaJual" expression="hargaBeli+hargaBeli*p/100+untung"/>
+            <assign variable="persentaseNaik" expression="(hargaJual-hargaBeli)/hargaBeli*100"/>
+            <output expression="&quot;Persentase kenaikan harga jual dibandingkan harga belinya adalah &quot;&amp;persentaseNaik&amp;&quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
