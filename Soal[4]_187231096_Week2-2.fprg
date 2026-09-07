@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-13 06:53:49 PM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMzsxMDoyMTo0MCBBTTszODk4"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xMzswNjo1Mzo0OSBQTTsxOzQwNDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Mencari waktu kedatangan sebuah bus di lokasi tujuan dengan menginput waktu keberangkatan, jarak tempuh, dan kecepatan rata-rata bus."/>
+            <declare name="jamBerangkat, jamDalamMenit, menitBerangkat, tambahanMenit, jamTiba, menitTiba, istirahat, t1, t2" type="Integer" array="False" size=""/>
+            <declare name="s, v, t" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan jam keberangkatan bus&quot;" newline="True"/>
+            <input variable="jamBerangkat"/>
+            <output expression="&quot;Masukkan menit keberangkatan bus&quot;" newline="True"/>
+            <input variable="menitBerangkat"/>
+            <output expression="&quot;Masukkan jarak tempuh bus (s)&quot;" newline="True"/>
+            <input variable="s"/>
+            <output expression="&quot;Masukkan kecepatan rata-rata bus (v)&quot;" newline="True"/>
+            <input variable="v"/>
+            <assign variable="istirahat" expression="45"/>
+            <assign variable="jamDalamMenit" expression="jamBerangkat*60"/>
+            <assign variable="t1" expression="jamDalamMenit+menitBerangkat"/>
+            <assign variable="t" expression="s/v"/>
+            <assign variable="tambahanMenit" expression="t*60"/>
+            <comment text="Perhitungan akan dimulai pada pukul 00.00, oleh sebab itu waktu keberangkatan juga dipakai dalam perhitungan."/>
+            <assign variable="t2" expression="t1+istirahat+tambahanMenit"/>
+            <assign variable="jamTiba" expression="t2/60"/>
+            <assign variable="menitTiba" expression="t2%60"/>
+            <output expression="&quot;Waktu kedatangan bus di lokasi tujuan adalah pada pukul &quot;&amp;jamTiba&amp;&quot; lebih &quot;&amp;menitTiba&amp;&quot; menit&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
