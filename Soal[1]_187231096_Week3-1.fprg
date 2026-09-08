@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marat Martypasha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-19 06:12:26 PM"/>
+        <attribute name="created" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xOTswNDowNDo1NCBQTTszOTI4"/>
+        <attribute name="edited" value="TWFyYXQgTWFydHlwYXNoYTtMQVBUT1AtVFI0QzlFREw7MjAyNC0wMi0xOTswNjoxMjoyNiBQTTs0OzQwMzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Mencari panjang garis singgung persekutuan luar dengan menginput (x1, y1), (x2, y2), r1, dan r2"/>
+            <declare name="x1, y1, x2, y2, r1, r2, garisSinggung, jarakPusat, jumlahR, selisihR" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan x1&quot;" newline="True"/>
+            <input variable="x1"/>
+            <output expression="&quot;Masukkan y1&quot;" newline="True"/>
+            <input variable="y1"/>
+            <output expression="&quot;Masukkan x2&quot;" newline="True"/>
+            <input variable="x2"/>
+            <output expression="&quot;Masukkan y2&quot;" newline="True"/>
+            <input variable="y2"/>
+            <output expression="&quot;Masukkan r1&quot;" newline="True"/>
+            <input variable="r1"/>
+            <output expression="&quot;Masukkan r2&quot;" newline="True"/>
+            <input variable="r2"/>
+            <assign variable="jarakPusat" expression="x2-x1"/>
+            <assign variable="jumlahR" expression="r1+r2"/>
+            <if expression="jarakPusat&lt;&gt;jumlahR">
+                <then>
+                    <if expression="jarakPusat&lt;jumlahR">
+                        <then>
+                            <output expression="&quot;Tidak memiliki garis singgung persekutuan luar&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="selisihR" expression="r1-r2"/>
+                            <assign variable="garisSinggung" expression="sqrt(jarakPusat*jarakPusat-selisihR*selisihR)"/>
+                            <output expression="&quot;Panjang garis singgung persekutuan luar adalah = &quot;&amp;garisSinggung" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="selisihR" expression="r1-r2"/>
+                    <assign variable="garisSinggung" expression="sqrt(jarakPusat*jarakPusat-(r1-r2)*(r1-r2))"/>
+                    <output expression="&quot;Panjang garis singgung persekutuan luar adalah = &quot;&amp;garisSinggung" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
